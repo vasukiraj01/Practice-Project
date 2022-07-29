@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class BusinessLevelOperations {
 
-	//Bubble sort to sort file in ascending order
+	//Bubble sort algorithm to sort files in ascending order
 	protected static String[] sort_sub(String array[], int size){
 		String temp = "";
 		for(int i=0; i<size; i++){
@@ -75,7 +75,7 @@ public class BusinessLevelOperations {
 			String ch = "y";
 			ch = op.nextLine();
 			if( ch.equalsIgnoreCase("y")){
-			System.out.println("Now You can write in tour created file");
+			System.out.println("Now You can write in our created file");
 			FileWriter obj2 = new FileWriter(file);
 			Scanner sc= new Scanner(System.in);
 			obj2.write(sc.nextLine());
@@ -83,15 +83,13 @@ public class BusinessLevelOperations {
 			obj2.close();
 			}
 			else
-				System.out.println("You can continue with othee options :)");
+				System.out.println("You can continue with other options :)");
 		}
 			catch (IOException e) {
 				
 				e.printStackTrace();
 			}
 	}
-	
-	
 
 	//File delete function
 	protected static void deleteFile(String fileToBeDeleted) {
@@ -102,7 +100,8 @@ public class BusinessLevelOperations {
 			if ( file.delete() ) {
 				System.out.println("File deleted successfully!");
 			}
-		} else {
+		}
+		 else {
 			System.out.println("Sorry, File wasn't deleted (File Not Found)");
 		}
 	}
@@ -125,22 +124,12 @@ public class BusinessLevelOperations {
 			}
 		}
 			else 
-				System.out.println("Sorry, File is not here (File Not Found)");
+				System.out.println("Sorry, File is missing (File Not Found)");
 			}
 			catch (FileNotFoundException e) {  
 	              
 	            System.out.println(e);  }
 	            
-		/*PrintWriter pw;  
-        try {  
-            pw = new PrintWriter(fileToBeSearched); //may throw exception   
-            pw.println("saved");  
-        }  
-        // providing the checked exception handler  
-        catch (FileNotFoundException e) {  
-              
-            System.out.println(e);  
-        } */
 	}
 
 

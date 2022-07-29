@@ -9,9 +9,10 @@ public class LockerPvtLtd {
 		int op=0, option=0;
 		Scanner sc =new Scanner(System.in);
 		
-		System.out.println("\t\n                     ****************************************\n");
-		System.out.println("\t                      Welcome to LokedMe!                     ");
-		System.out.println("\t                  By,Company Lockers Pvt Ltd. \n");
+		System.out.println("\n\t             ****************************************");
+		System.out.println("\t                     Welcome to LockedMe");
+		System.out.println("\t                  By Company Lockers Pvt Ltd. ");
+		System.out.println("\n\t                     Glad to have you :)");
 		System.out.println("\t              ****************************************");
 		System.out.println("        Developer:  Vasuki \n        Company\t:   Company Lockers Pvt. Ltd \n");
 		
@@ -62,9 +63,9 @@ public class LockerPvtLtd {
 						
 					case 2:
 						//deletion of a file takes place
+						
 						System.out.print("Your are about to delete the file\nEnter the name of the File to deleted\n");
 						String fileDelete = sc.next();
-
 						// Calling the function to delete the file
 						BusinessLevelOperations.deleteFile(fileDelete);
 						break;
@@ -88,13 +89,13 @@ public class LockerPvtLtd {
 				
 				//Voluntarily exiting the application
 				sc.close();
-				System.out.println("\n It was nice having you here! See you again. Good bye...");
+				System.out.println("\nIt was nice having you here!Good bye.See you again...");
 				System.exit(1);
 				break;
 			
 			default:
 				//In the case of unprecedented input execute this
-				System.out.println("\n\n Opps! Try agin! Invalid Input, Select within the range from 1-3\n");
+				System.out.println("\n\nTry agin! Invalid Input, Select within the range from 1-3\n");
 				break;
 			
 			}
