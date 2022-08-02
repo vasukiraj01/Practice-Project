@@ -24,10 +24,10 @@ public class LoginChecker extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String uname=request.getParameter("txtUname");
+		String email=request.getParameter("email");
 		String pword=request.getParameter("txtPassword");
 		PrintWriter out=response.getWriter();
-		if(uname.equalsIgnoreCase("java") && pword.equals("eclipse123")){
+		if(email.equalsIgnoreCase("simplilearn") && pword.equals("123")){
 			out.println("You are Welcomed");
 		}
 		else
@@ -53,9 +53,9 @@ public class LoginChecker extends HttpServlet {
 			rd.forward(request, response);
 		}
 		else {
-			out.println("Invalid Username or Password");
 			rd=request.getRequestDispatcher("LoginForm.html");
 			rd.include(request, response);
+			out.println("Invalid Username or Password");
 		}
 	}
 }
