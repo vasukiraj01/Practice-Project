@@ -53,9 +53,10 @@ public class LoginChecker extends HttpServlet {
 			rd.forward(request, response);
 		}
 		else {
+			out.println("Invalid UserId or Password");
 			rd=request.getRequestDispatcher("LoginForm.html");
 			rd.include(request, response);
-			out.println("Invalid Username or Password");
+			
 		}
 	}
 }
