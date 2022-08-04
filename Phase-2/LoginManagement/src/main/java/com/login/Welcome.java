@@ -31,6 +31,7 @@ public class Welcome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -42,6 +43,7 @@ public class Welcome extends HttpServlet {
 		HttpSession session=request.getSession();
 		String email=(String)session.getAttribute("email");
 		out.println("Welcome User");
+		response.setContentType("text/html");
 		out.println("<a href='Logout'>Logout</a>");
 	}
 
