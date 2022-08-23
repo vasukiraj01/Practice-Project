@@ -1,0 +1,13 @@
+package com.example.RestTemplateInputProject;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class RestTemplateInputProjectApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
