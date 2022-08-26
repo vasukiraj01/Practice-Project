@@ -29,9 +29,9 @@ public class AuthenticationTests {
     @Test
     public void returnUserFromName() {
         User testUser = new User();
-        testUser.setName("vas");
-        testUser.setEmail("vas@email.com");
-        testUser.setPassword("123vas");
+        testUser.setName("newTest");
+        testUser.setEmail("test@email.com");
+        testUser.setPassword("testpw");
         entityManager.persist(testUser);
         entityManager.flush();
 
