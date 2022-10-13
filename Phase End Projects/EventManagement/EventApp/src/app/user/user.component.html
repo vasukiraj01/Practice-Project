@@ -1,0 +1,62 @@
+<br><h1 align="center">List Of Employees</h1>
+<div class="jumbotron">
+    <div class="container">
+      
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of todoList">
+              <td>{{user.id}}</td>
+              <td>{{user.firstname}}</td>
+              <td>{{user.lastname}}</td>
+              <td>{{user.email}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+<br><br><br><br>     
+<div class="container">
+  <div class="col-md-12 text-center">
+    <button class="btn btn-primary" (click)="createTodo()">Add Emloyees</button>
+  </div>
+</div>
+        <div style="width: 500px; margin: auto;">
+            <div class="submit-form">
+              <div *ngIf="!isBookAdded">
+                <div class="form-group">
+                  <label for="name">FirstName</label>
+                  <input class="form-control" id="firstname" required [(ngModel)]="user.firstname" name="firstname"/>
+                </div>
+          
+                <div class="form-group">
+                    <label for="country">LastName</label>
+                    <input class="form-control" id="lastname" required [(ngModel)]="user.lastname" name="lastname" />
+                  </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input class="form-control" id="email" required [(ngModel)]="user.email" name="email" />
+                </div>
+          
+               
+                 <button (click)="createTodo()" class="btn btn-primary">Create</button> 
+              </div>
+          
+              <div *ngIf="isBookAdded">
+                <h3>Data added SuccessFully</h3>
+        
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    
+</div>
